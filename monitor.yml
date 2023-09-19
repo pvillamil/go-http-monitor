@@ -2,16 +2,415 @@ insecure: false
 timeout_seconds: 10
 verbose: false
 checks:
-  - url: "https://www.cfptime.org"
+  - number: "01.0"
+    url: "https://computosanteriores.oep.org.bo"
     status_code: 200
-    match: "Loading<"
-    response_time: 210
-  - url: "https://shodan.io/"
+    match: "OEP 2022"
+    response_time: 300
+    verbo: "GET"
+  - number: "02.0"
+    url: "https://computosanteriores.oep.org.bo/simobol_2017_2_Computo/resultados.html"
     status_code: 200
-    match: "the Internet of Things"
-  - url: "https://urlthatdoesnotexist.foobar"
-    status_code: 500
-    match: "the Internet of Things"
-  - tcp: 127.0.0.1
-    port: 8080
-    response_time: 1
+    match: "SIMOBOL"
+    response_time: 300
+    verbo: "GET"
+  - number: "02.1"
+    url: "https://computosanteriores.oep.org.bo/simobol_2017_2_Computo/PubResul/acta.2017.12.19.23.05.18.xlsx"
+    status_code: 200
+    match: "PK"
+    response_time: 10000
+    verbo: "GET"
+  - number: "02.2"
+    url: "https://computosanteriores.oep.org.bo/simobol_2017_2_Computo/resul/mesaElector/2717529"
+    status_code: 200
+    match: "21762"
+    response_time: 10000
+    verbo: "POST"
+  - number: "02.3"
+    url: "https://computosanteriores.oep.org.bo/simobol_2017_2_Computo/resul/imgActa/217621.jpg"
+    status_code: 200
+    match: "JFIF"
+    response_time: 10000
+    verbo: "GET"
+  - number: "03.0"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_1_Computo/resultados.html"
+    status_code: 200
+    match: "SIMOBOL"
+    response_time: 300
+    verbo: "GET"
+  - number: "03.1"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_1_Computo/PubResul/acta.2018.08.28.08.45.27.xlsx"
+    status_code: 200
+    match: "PK"
+    response_time: 10000
+    verbo: "GET"
+  - number: "03.2"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_1_Computo/resul/listaMesasReci/1731"
+    status_code: 200
+    match: "50001"
+    response_time: 10000
+    verbo: "POST"
+  - number: "03.3"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_1_Computo/resul/imgActa/500011.jpg"
+    status_code: 200
+    match: "JFIF"
+    response_time: 10000
+    verbo: "GET"
+  - number: "04.0"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_2_Computo/resultados.html"
+    status_code: 200
+    match: "SIMOBOL"
+    response_time: 10000
+    verbo: "GET"
+  - number: "04.1"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_2_Computo/PubResul/acta.2018.08.27.05.16.41.xlsx"
+    status_code: 200
+    match: "PK"
+    response_time: 10000
+    verbo: "GET"
+  - number: "04.2"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_2_Computo/resul/imgActa/600241.jpg"
+    status_code: 200
+    match: "JFIF"
+    response_time: 10000
+    verbo: "GET"
+  - number: "05.0"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_3_Computo/resultados.html"
+    status_code: 200
+    match: "SIMOBOL"
+    response_time: 10000
+    verbo: "GET"
+  - number: "05.1"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_3_Computo/PubResul/acta.2018.10.29.02.00.03.xlsx"
+    status_code: 200
+    match: "PK"
+    response_time: 10000
+    verbo: "GET"
+  - number: "05.2"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_3_Computo/resul/imgActa/500071.jpg"
+    status_code: 200
+    match: "JFIF"
+    response_time: 10000
+    verbo: "GET"
+  - number: "06.0"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_4_Computo/resultados.html"
+    status_code: 200
+    match: "SIMOBOL"
+    response_time: 10000
+    verbo: "GET"
+  - number: "06.1"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_4_Computo/PubResul/acta.2018.11.26.17.00.47.xlsx"
+    status_code: 200
+    match: "PK"
+    response_time: 10000
+    verbo: "GET"
+  - number: "06.2"
+    url: "https://computosanteriores.oep.org.bo/simobol_2018_4_Computo/resul/imgActa/100071.jpg"
+    status_code: 200
+    match: "JFIF"
+    response_time: 10000
+    verbo: "GET"
+  - number: "07.0"
+    url: "https://computosanteriores.oep.org.bo/simobol_2019_1_Computo/resultados.html"
+    status_code: 200
+    match: "SIMOBOL"
+    response_time: 10000
+    verbo: "GET"
+  - number: "07.1"
+    url: "https://computosanteriores.oep.org.bo/simobol_2019_1_Computo/PubResul/acta.2019.01.30.08.52.54.xlsx"
+    status_code: 200
+    match: "PK"
+    response_time: 10000
+    verbo: "GET"
+  - number: "07.2"
+    url: "https://computosanteriores.oep.org.bo/simobol_2019_1_Computo/resul/imgActa/102361.jpg"
+    status_code: 200
+    match: "JFIF"
+    response_time: 10000
+    verbo: "GET"
+  - number: "08.0"
+    url: "https://computosanteriores.oep.org.bo/simobol_2019_BOLPEBRA_Computo/resultados.html"
+    status_code: 200
+    match: "SIMOBOL"
+    response_time: 10000
+    verbo: "GET"
+  - number: "08.1"
+    url: "https://computosanteriores.oep.org.bo/simobol_2019_BOLPEBRA_Computo/PubResul/acta.2019.02.17.22.00.31.xlsx"
+    status_code: 200
+    match: "PK"
+    response_time: 10000
+    verbo: "GET"
+  - number: "08.2"
+    url: "https://computosanteriores.oep.org.bo/simobol_2019_BOLPEBRA_Computo/resul/imgActa/900011.jpg"
+    status_code: 200
+    match: "JFIF"
+    response_time: 10000
+    verbo: "GET"
+  - number: "09.0"
+    url: "https://computosanteriores.oep.org.bo/simobol_2019_COTEOR_Computo/resultados.html"
+    status_code: 200
+    match: "SIMOBOL"
+    response_time: 10000
+    verbo: "GET"
+  - number: "09.1"
+    url: "https://computosanteriores.oep.org.bo/simobol_2019_COTEOR_Computo/PubResul/acta.2019.02.17.22.09.13.xlsx"
+    status_code: 200
+    match: "PK"
+    response_time: 10000
+    verbo: "GET"
+  - number: "10.0"
+    url: "https://computosanteriores.oep.org.bo/simobol_2019_3_Computo/resultados.html"
+    status_code: 200
+    match: "SIMOBOL"
+    response_time: 10000
+    verbo: "GET"
+  - number: "10.1"
+    url: "https://computosanteriores.oep.org.bo/simobol_2019_3_Computo/PubResul/acta.2019.10.25.21.10.30.xlsx"
+    status_code: 200
+    match: "PK"
+    response_time: 10000
+    verbo: "GET"
+  - number: "10.2"
+    url: "https://computosanteriores.oep.org.bo/simobol_2019_3_Computo/resul/imgActa/218541.jpg"
+    status_code: 200
+    match: "JFIF"
+    response_time: 10000
+    verbo: "GET"
+  - number: "11.0"
+    url: "https://computo2020.oep.org.bo/"
+    status_code: 200
+    match: "Resultados Elecciones Nacionales 2020"
+    response_time: 10000
+    verbo: "GET"
+  - number: "11.1"
+    url: "https://computo2020.oep.org.bo/api-resultados-interno-1.0.0/api/v1/descarga"
+    status_code: 200
+    match: '"tipoArchivo":"EXCEL"'
+    response_time: 10000
+    payload: '{"tipoArchivo": "EXCEL"}'
+    verbo: "POST"
+  - number: "11.2"
+    url: "https://computo2020.oep.org.bo/api-resultados-interno-1.0.0/api/v1/resultado/ciudadano"
+    status_code: 200
+    match: '"tipo":"ACTA"'
+    response_time: 16000
+    payload: '{"documentoIdentidad": "2717529", "complemento": "", "fechaNac": "05/01/1974"}'
+    verbo: "POST"
+  - number: "12.0"
+    url: "https://computo2019.oep.org.bo/simobol_2019_3_Computo/resultados.html"
+    status_code: 200
+    match: "SIMOBOL"
+    response_time: 10000
+    verbo: "GET"
+  - number: "12.1"
+    url: "https://computo2019.oep.org.bo/simobol_2019_3_Computo/PubResul/acta.2023.07.02.17.12.00.xlsx"
+    status_code: 200
+    match: "PK"
+    response_time: 10000
+    verbo: "GET"
+  - number: "12.2"
+    url: "https://computo2019.oep.org.bo/simobol_2019_3_Computo/resul/imgActa/218541.jpg"
+    status_code: 200
+    match: "JFIF"
+    response_time: 10000
+    verbo: "GET"
+  - number: "13.0"
+    url: "https://computoalcaldes-int.oep.org.bo/"
+    status_code: 200
+    match: "ELECCIÓN EXTRAORDINARIA 2022"
+    response_time: 10000
+    verbo: "GET"
+  - number: "13.1"
+    url: "https://computoalcaldes-int.oep.org.bo/oep-api-resultado-base-1.0.5/api/v1/descargar"
+    status_code: 200
+    match: '"tipoArchivo":"EXCEL"'
+    response_time: 10000
+    payload: '{"idDepartamento": 13, "tipoArchivo": "EXCEL"}'
+    verbo: "POST"
+  - number: "13.2"
+    url: "https://computoalcaldes-int.oep.org.bo/oep-api-resultado-base-1.0.5/api/v1/resultados/mesa"
+    status_code: 200
+    match: '"tipo":"ACTA"'
+    response_time: 16000
+    payload: '{"codigoMesa": 7000451}'
+    verbo: "POST"
+  - number: "14.0"
+    url: "https://computoreaco-int.oep.org.bo/"
+    status_code: 200
+    match: "ELECCIÓN EXTRAORDINARIA 2022"
+    response_time: 10000
+    verbo: "GET"
+  - number: "14.1"
+    url: "https://computoreaco-int.oep.org.bo/oep-api-resultado-base-1.0.6/api/v1/descargar"
+    status_code: 200
+    match: '"tipoArchivo":"EXCEL"'
+    response_time: 10000
+    payload: '{"idDepartamento": 17, "tipoArchivo": "EXCEL"}'
+    verbo: "POST"
+  - number: "14.2"
+    url: "https://computoreaco-int.oep.org.bo/oep-api-resultado-base-1.0.6/api/v1/resultados/mesa"
+    status_code: 200
+    match: '"tipo":"ACTA"'
+    response_time: 16000
+    payload: '{"codigoMesa": 7005742}'
+    verbo: "POST"
+  - number: "15.0"
+    url: "https://computo1v.oep.org.bo/"
+    status_code: 200
+    match: "ELECCIÓN DE AUTORIDADES POLÍTICAS DEPARTAMENTALES, REGIONALES Y MUNICIPALES 2021"
+    response_time: 10000
+    verbo: "GET"
+  - number: "15.1"
+    url: "https://computo1v.oep.org.bo/oep-api-resultado-base-1.0.0/api/v1/descargar"
+    status_code: 200
+    match: '"tipoArchivo":"EXCEL"'
+    response_time: 10000
+    payload: '{"idDepartamento": 8, "tipoArchivo": "EXCEL"}'
+    verbo: "POST"
+  - number: "15.2"
+    url: "https://computo1v.oep.org.bo/oep-api-resultado-base-1.0.0/api/v1/resultados/mesa"
+    status_code: 200
+    match: '"tipo":"ACTA"'
+    response_time: 16000
+    payload: '{"codigoMesa": 2015136}'
+    verbo: "POST"
+  - number: "16.0"
+    url: "https://computo2v.oep.org.bo/"
+    status_code: 200
+    match: "ELECCIÓN DE AUTORIDADES POLÍTICAS DEPARTAMENTALES, REGIONALES Y MUNICIPALES 2021"
+    response_time: 10000
+    verbo: "GET"
+  - number: "16.1"
+    url: "https://computo2v.oep.org.bo/oep-api-resultado-base-1.0.0/api/v2/descargar"
+    status_code: 200
+    match: '"tipoArchivo":"EXCEL"'
+    response_time: 10000
+    payload: '{"idDepartamento": 2, "tipoArchivo": "EXCEL"}'
+    verbo: "POST"
+  - number: "16.2"
+    url: "https://computo2v.oep.org.bo/oep-api-resultado-base-1.0.0/api/v2/resultados/mesa"
+    status_code: 200
+    match: '"tipo":"ACTA"'
+    response_time: 16000
+    payload: '{"codigoMesa": 2015137}'
+    verbo: "POST"
+  - number: "17.0"
+    url: "https://computocomteco.oep.org.bo/"
+    status_code: 200
+    match: "ELECCIÓN DE CONSEJOS COMTECO 2021"
+    response_time: 10000
+    verbo: "GET"
+  - number: "17.1"
+    url: "https://computocomteco.oep.org.bo/oep-api-resultado-base-1.0.7/api/v1/descargar"
+    status_code: 200
+    match: '"tipoArchivo":"EXCEL"'
+    response_time: 10000
+    payload: '{"idDepartamento": 3, "tipoArchivo": "EXCEL"}'
+    verbo: "POST"
+  - number: "17.2"
+    url: "https://computocomteco.oep.org.bo/oep-api-resultado-base-1.0.7/api/v1/resultados/mesa"
+    status_code: 200
+    match: '"tipo":"ACTA"'
+    response_time: 16000
+    payload: '{"codigoMesa": 3000136}'
+    verbo: "POST"
+  - number: "18.0"
+    url: "https://computocoteL.oep.org.bo/"
+    status_code: 200
+    match: "ELECCIÓN DE CONSEJOS COTEL 2023"
+    response_time: 10000
+    verbo: "GET"
+  - number: "18.1"
+    url: "https://computocotel.oep.org.bo/oep-api-resultado-base-1.0.8/api/v1/descargar"
+    status_code: 200
+    match: '"tipoArchivo":"EXCEL"'
+    response_time: 10000
+    payload: '{"idDepartamento": 2, "tipoArchivo": "EXCEL"}'
+    verbo: "POST"
+  - number: "18.2"
+    url: "https://computocotel.oep.org.bo/oep-api-resultado-base-1.0.8/api/v1/resultados/mesa"
+    status_code: 200
+    match: '"tipo":"ACTA"'
+    response_time: 16000
+    payload: '{"codigoMesa": 2000081}'
+    verbo: "POST"
+  - number: "19.0"
+    url: "https://computocosett.oep.org.bo/"
+    status_code: 200
+    match: "ELECCIÓN DE CONSEJOS COSETT 2022"
+    response_time: 10000
+    verbo: "GET"
+  - number: "19.1"
+    url: "https://computocosett.oep.org.bo/oep-api-resultado-base-1.0.4/api/v1/descargar"
+    status_code: 200
+    match: '"tipoArchivo":"EXCEL"'
+    response_time: 10000
+    payload: '{"idDepartamento": 6, "tipoArchivo": "EXCEL"}'
+    verbo: "POST"
+  - number: "19.2"
+    url: "https://computocosett.oep.org.bo/oep-api-resultado-base-1.0.4/api/v1/resultados/mesa"
+    status_code: 200
+    match: '"tipo":"ACTA"'
+    response_time: 16000
+    payload: '{"codigoMesa": 6000011}'
+    verbo: "POST"
+  - number: "20.0"
+    url: "https://computocoteor.oep.org.bo/"
+    status_code: 200
+    match: "ELECCIÓN DE CONSEJOS COTEOR 2022"
+    response_time: 10000
+    verbo: "GET"
+  - number: "20.1"
+    url: "https://computocoteor.oep.org.bo/oep-api-resultado-base-1.0.3/api/v1/descargar"
+    status_code: 200
+    match: '"tipoArchivo":"EXCEL"'
+    response_time: 10000
+    payload: '{"idDepartamento": 4, "tipoArchivo": "EXCEL"}'
+    verbo: "POST"
+  - number: "20.2"
+    url: "https://computocoteor.oep.org.bo/oep-api-resultado-base-1.0.3/api/v1/resultados/mesa"
+    status_code: 200
+    match: '"tipo":"ACTA"'
+    response_time: 16000
+    payload: '{"codigoMesa": 4000051}'
+    verbo: "POST"
+  - number: "21.0"
+    url: "https://computocomteco2021.oep.org.bo/"
+    status_code: 200
+    match: "ELECCIÓN DE CONSEJOS COMTECO 2021"
+    response_time: 10000
+    verbo: "GET"
+  - number: "21.1"
+    url: "https://computocomteco2021.oep.org.bo/oep-api-resultado-base-1.0.1/api/v3/descargar"
+    status_code: 200
+    match: '"tipoArchivo":"EXCEL"'
+    response_time: 10000
+    payload: '{"idDepartamento": 3, "tipoArchivo": "EXCEL"}'
+    verbo: "POST"
+  - number: "21.2"
+    url: "https://computocomteco2021.oep.org.bo/oep-api-resultado-base-1.0.1/api/v3/resultados/mesa"
+    status_code: 200
+    match: '"tipo":"ACTA"'
+    response_time: 16000
+    payload: '{"codigoMesa": 3000771}'
+    verbo: "POST"
+  - number: "22.0"
+    url: "https://computocosaalt.oep.org.bo/"
+    status_code: 200
+    match: "ELECCIÓN DE CONSEJOS COSAALT 2023"
+    response_time: 10000
+    verbo: "GET"
+  - number: "22.1"
+    url: "https://computocosaalt.oep.org.bo/oep-api-resultado-base-1.0.9/api/v1/descargar"
+    status_code: 200
+    match: '"tipoArchivo":"EXCEL"'
+    response_time: 10000
+    payload: '{"idDepartamento": 6, "tipoArchivo": "EXCEL"}'
+    verbo: "POST"
+  - number: "22.2"
+    url: "https://computocosaalt.oep.org.bo/oep-api-resultado-base-1.0.9/api/v1/resultados/mesa"
+    status_code: 200
+    match: '"tipo":"ACTA"'
+    response_time: 16000
+    payload: '{"codigoMesa": 6000011}'
+    verbo: "POST"
